@@ -12,15 +12,16 @@ export function MissionSection() {
         </div>
       </div>
 
-      <div className="relative z-10 max-w-4xl mx-auto">
-        <span className="text-xs font-bold tracking-widest text-gray-400 uppercase mb-4 block">
+      <div className="relative z-10  mx-auto  w-full">
+        <span className="text-[20px] font-bold tracking-widest text-gray-400 uppercase mb-4 block">
           OUR AIM
         </span>
-        <h2 className="text-3xl md:text-5xl font-bold text-white mb-6 leading-tight">
-          Something along the lines of accessibility to the networking.
+        <h2 className="text-3xl md:text-5xl font-bold text-white mb-6 leading-tight ">
+          Making global payments accessible to everyone
         </h2>
-        <p className="text-gray-500 text-sm">
-          still needs gresh pattern in background
+        <p className=" text-center text-[20px] text-[#E1E6E7] max-w-3xl mx-auto">
+          We believe access to global digital services shouldn’t depend on where you live.
+          Gresh is built to give Africans reliable access to the global economy.
         </p>
       </div>
     </section>);

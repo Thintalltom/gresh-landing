@@ -11,7 +11,7 @@ export function HeroSection() {
       <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.03)_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)] pointer-events-none" />
 
       {/* Announcement Badge */}
-      <div className="inline-flex items-center gap-2 px-1 py-1 pr-3 mb-8 bg-white/10 rounded-full border border-white/10 backdrop-blur-sm">
+      {/* <div className="inline-flex items-center gap-2 px-1 py-1 pr-3 mb-8 bg-white/10 rounded-full border border-white/10 backdrop-blur-sm">
         <span className="px-2 py-0.5 text-xs font-bold text-[#0d2f28] bg-[#33ff66] rounded-full">
           Release
         </span>
@@ -19,18 +19,16 @@ export function HeroSection() {
           Our beta launch is set for September 2025!
         </span>
         <ArrowRight className="w-4 h-4 text-[#33ff66]" />
-      </div>
+      </div> */}
 
       {/* Main Content */}
-      <h1 className="max-w-4xl mx-auto mb-6 text-4xl font-bold leading-tight text-white md:text-6xl lg:text-7xl uppercase tracking-tight">
-        Making money is hard,
-        <br />
-        <span className="text-gray-300">spending it should be easy.</span>
-      </h1>
+      <h3 className="max-w-4xl mx-auto mb-6 text-4xl font-bold leading-tight text-white md:text-6xl lg:text-[56px] tracking-tight">
+       One wallet. Limitless virtual cards.
+    
+      </h3>
 
       <p className="max-w-2xl mx-auto mb-10 text-lg text-gray-400 md:text-xl">
-        From paying for Canva to clearing your carts, our virtual cards and
-        wallet make spending globally and locally a breeze.
+       Create multiple virtual cards, fund them easily, and pay for global services without unnecessary charges or restrictions.
       </p>
 
       <button className="px-8 py-4 text-base font-bold text-[#0d2f28] bg-[#33ff66] rounded-full hover:scale-105 transition-transform duration-200 mb-8 shadow-[0_0_20px_rgba(51,255,102,0.3)]">

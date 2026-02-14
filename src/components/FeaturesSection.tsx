@@ -8,33 +8,37 @@ export function FeaturesSection() {
     <section className="py-24 bg-white px-4">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
-          <span className="text-[#0acf83] font-medium text-sm tracking-wider uppercase mb-2 block">
+          {/* <span className="text-[#0acf83] font-medium text-sm tracking-wider uppercase mb-2 block">
             What we offer (MVP Stage)
-          </span>
-          <h2 className="text-3xl md:text-5xl font-bold text-[#1a1a1a] mb-4">
-            Everything You Need to Spend Smarter
+          </span> */}
+          <h2 className="text-3xl md:text-3xl font-bold text-[#1a1a1a] mb-4">
+            Built for how you spend online
           </h2>
-          <p className="text-gray-500 max-w-2xl mx-auto">
-            We're your partner for paying globally, and keeping your money in
-            check. Whether you're a freelancer paying for Upwork or a business
-            subscribing for automation.
+          <p className="text-[#333333] max-w-2xl mx-auto">
+            Gresh gives you the freedom to create, manage, and use virtual cards the way you want without limits, friction, or confusing hidden fees.
           </p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           <FeatureCard
-            title="USD & NGN virtual cards for your transactions"
+            title="Create limitless virtual cards"
             icon={atm}
+            hoverheader='Create limitless virtual cards'
+            hoverText="Generate multiple USD and NGN virtual cards for different needs. From subscriptions to work tools, ads, or personal spending."
             illustration="card" />
 
           <FeatureCard
-            title="Smart spending tracker"
+            title="Simple pricing. No unnecessary charges."
             icon={tracking}
+             hoverheader='Simple pricing. No unnecessary charges.'
+            hoverText="No hidden fees, track your spending, no confusing deductions. You only pay for what you use, and your money stays yours."
             illustration="chart" />
 
           <FeatureCard
-            title="Seamless wallet funding"
+            title="One wallet, full control"
             icon={funding}
+             hoverheader='One wallet, full control'
+            hoverText="Fund your wallet easily, and manage every card from one place."
             illustration="wallet" />
 
         </div>
@@ -45,20 +49,30 @@ export function FeaturesSection() {
 function FeatureCard({
   title,
   icon,
+  hoverheader,
+  hoverText,
   illustration
+}: { title: string; icon: React.ReactNode | string; hoverheader?: string; hoverText: string; illustration: 'card' | 'chart' | 'wallet'; }) {
+  const [isHovered, setIsHovered] = React.useState(false);
 
-
-
-
-}: { title: string; icon: React.ReactNode | string; illustration: 'card' | 'chart' | 'wallet'; }) {
   return (
-    <div className="group relative bg-[#f8fafc] rounded-3xl p-8 h-[400px] flex flex-col justify-between overflow-hidden hover:shadow-lg transition-shadow duration-300">
+    <div 
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
+      className="group relative bg-[#E6FFF4] rounded-3xl p-8 h-[400px] flex flex-col justify-between overflow-hidden hover:shadow-lg transition-shadow duration-300">
       {/* Illustration Area */}
       <div className="flex-1 flex items-center justify-center relative">
-        {typeof icon === 'string' ? (
-          <img src={icon} alt={title} className="w-full h-64 object-contain" />
+        {isHovered ? (
+          <div className='flex flex-col cursor-pointer  gap-4'>
+          <h4 className='text-[#5E5E5E] text-[24px] font-bold'>{hoverheader}</h4>
+          <p className="text-[#828282]  text-[24px]">{hoverText}</p>
+          </div>
         ) : (
-          icon
+          typeof icon === 'string' ? (
+            <img src={icon} alt={title} className="w-full h-64 object-contain" />
+          ) : (
+            icon
+          )
         )}
         {false && illustration === 'card' &&
           <div className="relative">
@@ -99,15 +113,17 @@ function FeatureCard({
           </div>
         }
       </div>
+{!isHovered &&
 
       <div className="flex items-end justify-between mt-6">
         <h3 className="text-xl font-bold text-[#1a1a1a] max-w-[80%]">
           {title}
         </h3>
-        <button className="w-8 h-8 rounded-full bg-white flex items-center justify-center shadow-sm text-gray-400 hover:bg-[#0acf83] hover:text-white transition-colors">
-          <Plus className="w-4 h-4" />
+        <button className="w-8 h-8 rounded-full border-[0.5px] border-[#00542C] bg-white flex items-center justify-center shadow-sm text-gray-400 hover:bg-[#0acf83] hover:text-white transition-colors">
+          <Plus className="w-4 h-4 " />
         </button>
       </div>
+}
     </div>);
 
 }
