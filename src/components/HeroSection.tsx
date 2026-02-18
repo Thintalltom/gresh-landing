@@ -18,6 +18,13 @@ import {
   PenTool,
 } from 'lucide-react'
 export function HeroSection() {
+  const scrollToWaitlist = () => {
+    const waitlistSection = document.getElementById('waitlist-section');
+    if (waitlistSection) {
+      waitlistSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <section className="relative pt-32 pb-0 overflow-hidden bg-[#000000] min-h-screen flex flex-col items-center text-center px-4">
       {/* Green glow in center */}
@@ -46,7 +53,7 @@ export function HeroSection() {
         Create multiple virtual cards, fund them easily, and pay for global services without unnecessary charges or restrictions.
       </p>
 
-      <button className="relative z-10 px-8 py-4 text-base font-bold text-[#0d2f28] bg-[#66ff99] rounded-full hover:scale-105 transition-transform duration-200 mb-8 shadow-[0_0_20px_rgba(102,255,153,0.3)]">
+      <button onClick={scrollToWaitlist} className="relative z-10 px-8 py-4 text-base font-bold text-[#0d2f28] bg-[#66ff99] rounded-full hover:scale-105 transition-transform duration-200 mb-8 shadow-[0_0_20px_rgba(102,255,153,0.3)]">
         Join the Waitlist for Early Access
       </button>
 
