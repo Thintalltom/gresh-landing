@@ -1,4 +1,12 @@
 import iphone from '../assets/iphone.png';
+import slackLogo from '../assets/slack.png';
+import notionLogo from '../assets/notion.png';
+import googleLogo from '../assets/google-workspace.png';
+import adobeLogo from '../assets/adobe.png';
+import figmaLogo from '../assets/figma.png';
+import amazonLogo from '../assets/amazon.png';
+import nikeLogo from '../assets/nike.png';
+import adidasLogo from '../assets/adidas.png';
 import { BrandPill } from './ui/BrandPills'
 import {
   Slack,
@@ -11,9 +19,11 @@ import {
 } from 'lucide-react'
 export function HeroSection() {
   return (
-    <section className="relative pt-32 pb-0 overflow-hidden bg-gradient-to-b from-[#0d2f28] to-[#051a16] min-h-screen flex flex-col items-center text-center px-4">
+    <section className="relative pt-32 pb-0 overflow-hidden bg-[#000000] min-h-screen flex flex-col items-center text-center px-4">
+      {/* Green glow in center */}
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_60%_60%_at_50%_50%,rgba(13,47,40,0.8),transparent_70%)] pointer-events-none" />
       {/* Background Grid Effect */}
-      <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.03)_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)] pointer-events-none" />
+      <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.1)_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)] pointer-events-none" />
 
       {/* Announcement Badge */}
       {/* <div className="inline-flex items-center gap-2 px-1 py-1 pr-3 mb-8 bg-white/10 rounded-full border border-white/10 backdrop-blur-sm">
@@ -36,7 +46,7 @@ export function HeroSection() {
         Create multiple virtual cards, fund them easily, and pay for global services without unnecessary charges or restrictions.
       </p>
 
-      <button className="px-8 py-4 text-base font-bold text-[#0d2f28] bg-[#33ff66] rounded-full hover:scale-105 transition-transform duration-200 mb-8 shadow-[0_0_20px_rgba(51,255,102,0.3)]">
+      <button className="relative z-10 px-8 py-4 text-base font-bold text-[#0d2f28] bg-[#66ff99] rounded-full hover:scale-105 transition-transform duration-200 mb-8 shadow-[0_0_20px_rgba(102,255,153,0.3)]">
         Join the Waitlist for Early Access
       </button>
 
@@ -51,15 +61,15 @@ export function HeroSection() {
         <div className="absolute inset-0 w-full pointer-events-none">
           {/* Bottom Left Cluster */}
           <BrandPill
-            icon={Slack}
+            iconImage={slackLogo}
             label="Slack"
-            className="bottom-32 left-6 -rotate-12"
+            className="bottom-20 left-6 -rotate-6"
             style={{
               animation: 'float 6s ease-in-out infinite',
             }}
           />
           <BrandPill
-            icon={Command}
+            iconImage={notionLogo}
             label="Notion"
             className="bottom-16 left-28 rotate-6"
             style={{
@@ -67,25 +77,36 @@ export function HeroSection() {
             }}
           />
           <BrandPill
-            icon={Chrome}
+            // iconImage={googleLogo}
             label="Google Workspace"
-            className="bottom-2 left-14 -rotate-3"
+            customLabel={
+              <span className="text-sm font-medium">
+                <span style={{ color: '#4285F4' }}>G</span>
+                <span style={{ color: '#EA4335' }}>o</span>
+                <span style={{ color: '#FBBC04' }}>o</span>
+                <span style={{ color: '#4285F4' }}>g</span>
+                <span style={{ color: '#34A853' }}>l</span>
+                <span style={{ color: '#EA4335' }}>e</span>
+                <span className="text-gray-300"> Workspace</span>
+              </span>
+            }
+            className="bottom-2 left-5 -rotate-0"
             style={{
               animation: 'float 8s ease-in-out infinite 2s',
             }}
           />
           <BrandPill
-            icon={PenTool}
+            iconImage={adobeLogo}
             label="Adobe"
-            className="bottom-40 left-36 rotate-12"
+            className="bottom-20 left-52 rotate-12"
             style={{
               animation: 'float 5s ease-in-out infinite 0.5s',
             }}
           />
           <BrandPill
-            icon={Figma}
+            iconImage={figmaLogo}
             label="Figma"
-            className="bottom-24 left-20 rotate-6"
+            className="bottom-2 left-52 rotate-0"
             style={{
               animation: 'float 6s ease-in-out infinite 1.2s',
             }}
@@ -93,41 +114,41 @@ export function HeroSection() {
 
           {/* Bottom Right Cluster */}
           <BrandPill
-            icon={Slack}
+            iconImage={slackLogo}
             label="Slack"
-            className="bottom-36 right-8 rotate-12"
+            className="bottom-20 right-6 -rotate-6"
             style={{
               animation: 'float 6s ease-in-out infinite 1.5s',
             }}
           />
           <BrandPill
-            icon={Command}
+            iconImage={notionLogo}
             label="Notion"
-            className="bottom-20 right-24 -rotate-6"
+            className="bottom-16 right-28 rotate-6"
             style={{
               animation: 'float 7s ease-in-out infinite 0.5s',
             }}
           />
           <BrandPill
-            icon={ShoppingBag}
+            iconImage={amazonLogo}
             label="Amazon"
-            className="bottom-4 right-4 rotate-3"
+            className="bottom-2 right-5 -rotate-0"
             style={{
               animation: 'float 8s ease-in-out infinite 2.5s',
             }}
           />
           <BrandPill
-            icon={CreditCard}
+            iconImage={nikeLogo}
             label="Nike"
-            className="bottom-28 right-12 -rotate-12"
+            className="bottom-20 right-52 rotate-12"
             style={{
               animation: 'float 5s ease-in-out infinite 1s',
             }}
           />
           <BrandPill
-            icon={Figma}
+            iconImage={adidasLogo}
             label="Adidas"
-            className="bottom-12 right-24 -rotate-6"
+            className="bottom-2 right-52 rotate-0"
             style={{
               animation: 'float 6s ease-in-out infinite 1.8s',
             }}

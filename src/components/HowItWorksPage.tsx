@@ -25,17 +25,19 @@ const cardDetails = [
 export function HowItWorksPage() {
   return (
 
-    <section className="relative pt-32 pb-20 overflow-hidden bg-gradient-to-b from-[#0d2f28] to-[#051a16] text-center px-4 ">
+    <section className="relative pt-32 pb-20 overflow-hidden bg-[#000000] text-center px-4 ">
+      {/* Green glow in center */}
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_60%_60%_at_50%_50%,rgba(13,47,40,0.8),transparent_70%)] pointer-events-none" />
       {/* Background Grid Effect */}
-      <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.03)_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)] pointer-events-none" />
+      <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.1)_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)] pointer-events-none" />
 
-      <h1 className=" mx-auto mb-6 text-4xl font-bold leading-tight text-white md:text-6xl  tracking-tight">
+      <h1 className="relative z-10 mx-auto mb-6 text-4xl font-bold leading-tight text-white md:text-6xl  tracking-tight">
         No long talks! <br />  Get a card in minutes
       </h1>
-      <p className="max-w-2xl mx-auto text-lg text-gray-400 md:text-xl">
+      <p className="relative z-10 max-w-2xl mx-auto text-lg text-gray-400 md:text-xl">
         Get started with Gresh in three simple steps. Create your account, fund your wallet, and start spending globally.
       </p>
-      <div className="mt-16  mx-auto grid gap-8 md:grid-cols-3">
+      <div className="relative z-10 mt-16  mx-auto grid gap-8 md:grid-cols-3">
         {cardDetails.map((card, index) => (
           <ReusableWorkCard key={index} image={card.image} title={card.title} description={card.description} label={card.label} />
         ))}

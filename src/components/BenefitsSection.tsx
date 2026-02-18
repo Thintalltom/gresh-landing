@@ -7,7 +7,7 @@ export function BenefitsSection() {
         <div className="sticky top-0 mb-6">
           <div className="bg-[#0D2F28] rounded-[2.5rem] p-8 md:p-16 overflow-hidden relative min-h-[400px] flex flex-col justify-center">
             <div className="max-w-2xl relative z-10">
-              <h2 className="text-3xl md:text-5xl font-bold text-[#33FFC2] mb-6">
+              <h2 className="text-3xl font-serif md:text-5xl font-bold text-[#33FFC2] mb-6">
                 Save more on transactions,
                 <br />
                 No hidden fees.

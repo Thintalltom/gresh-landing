@@ -6,10 +6,10 @@ export function Footer() {
         <div>© 2025 Gresh. All rights reserved.</div>
 
         <div className="flex items-center gap-6">
-          <a href="instagram.com/usegresh" className="hover:text-[#0acf83] transition-colors">
+          <a href="https://instagram.com/usegresh" target="_blank" rel="noopener noreferrer" className="hover:text-[#0acf83] transition-colors">
             <Instagram className="w-4 h-4" />
           </a>
-          <a href="x.com/usegresh" className="hover:text-[#0acf83] transition-colors">
+          <a href="https://x.com/usegresh" target="_blank" rel="noopener noreferrer" className="hover:text-[#0acf83] transition-colors">
             <Twitter className="w-4 h-4" />
           </a>
         </div>

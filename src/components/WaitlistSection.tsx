@@ -40,7 +40,7 @@ export function WaitlistSection() {
   };
 
   return (
-    <section className="py-20 bg-white px-4">
+    <section id="waitlist-section" className="py-20 bg-white px-4">
       <div className="max-w-4xl mx-auto bg-[#f8fafc] rounded-3xl p-8 md:p-12 flex flex-col md:flex-row items-center justify-between gap-8 shadow-sm">
         <div className="flex-1">
           <h2 className="text-2xl md:text-4xl font-bold text-[#0d2f28] mb-2">
