@@ -7,32 +7,32 @@ import logo from '../assets/GreshLogo.png';
 const infoGrid = [
   {
     image: setup1,
-    title: 'Quick sign-up with secure KYC',
-    description: 'Your journey to financial freedom starts here. Join Africa\'s best freelancers and digital hustlers with a quick, secure process.',
+    title: 'Get started in minutes',
+    description: 'Designed for freelancers, creators, and digital natives \n who pay online often.',
     info: [
-      'No delays, quick action',
-      'Tailored for your every need',
-         'Tailored for your every need'
+      'Quick signup with secure KYC',
+      'Easy wallet funding',
+      'Create and manage cards instantly'
     ]
   },
   {
     image: setup2,
     title: 'Fund Your Wallet with Ease.',
-    description: 'Keep your money moving with instant top-ups tailored for your needs. Join our waitlist for the September 2025 beta!',
-     info: [
-      'No delays, quick action',
-      'Tailored for your every need',
-         'Tailored for your every need'
+    description: 'Top up your wallet instantly and keep your money moving with clear rates \n and no unnecessary charges. Built for everyday online spending.',
+    info: [
+      'Instant wallet funding with transparent rates',
+      'Fair exchange, no hidden markups',
+      'Real-time balance and transaction insights'
     ]
   },
   {
     image: setup3,
     title: 'Get Your Virtual Card Instantly.',
-    description: 'Unlock global and local payments with a tap. Be ready for our beta launch in September 2025!',
-     info: [
-      'No delays, quick action',
-      'Tailored for your every need',
-         'Tailored for your every need'
+    description: 'Create and manage virtual cards for global and local online payments\n all from one wallet.',
+    info: [
+      'Create multiple virtual cards anytime',
+      'Use cards globally for subscriptions and online services',
+      'Freeze, replace, or manage cards with full control'
     ]
   }
 ]
@@ -50,7 +50,7 @@ export function AccountSetupSection() {
         {/* Content - Right Side */}
         <div className='pb-10'>
           <div className="w-12 h-12 rounded-full flex items-center justify-center mb-6">
-              <img src={logo} alt='logo' className='w-6 h-6' />
+            <img src={logo} alt='logo' className='w-6 h-6' />
           </div>
 
           <h2 className="text-3xl md:text-5xl font-bold mb-6">
@@ -63,7 +63,7 @@ export function AccountSetupSection() {
 
           <ul className="space-y-4 mb-10">
             {currentItem.info.map((item, i) =>
-            <li key={i} className="flex items-center gap-3">
+              <li key={i} className="flex items-center gap-3">
                 <Check className="w-5 h-5 text-[#33ff66]" />
                 <span className="text-gray-300">{item}</span>
               </li>
@@ -71,15 +71,19 @@ export function AccountSetupSection() {
           </ul>
 
           <div className="flex gap-4">
-            <button 
+            <button
               onClick={() => setCurrentIndex((prev) => (prev - 1 + infoGrid.length) % infoGrid.length)}
-              className="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center hover:bg-white/5 transition-colors">
-              <ArrowLeft className="w-5 h-5 text-gray-400" />
+              className={`w-24 h-12 rounded-full border border-white/10 flex items-center justify-center transition-colors ${
+                currentIndex === 0 ? 'bg-[#696969] hover:bg-white/20' : 'hover:bg-white/5'
+              }`}>
+              <ArrowLeft className="w-5 h-5 text-gray-400 font-extrabold" />
             </button>
-            <button 
+            <button
               onClick={() => setCurrentIndex((prev) => (prev + 1) % infoGrid.length)}
-              className="w-12 h-12 rounded-full bg-white/10 flex items-center justify-center hover:bg-white/20 transition-colors">
-              <ArrowRight className="w-5 h-5 text-white" />
+              className={`w-24 h-12 rounded-full border border-white/10 flex items-center justify-center transition-colors ${
+                currentIndex === infoGrid.length - 1 ? 'bg-[#696969] hover:bg-white/20' : 'hover:bg-white/5'
+              }`}>
+              <ArrowRight className="w-5 h-5 text-white font-extrabold" />
             </button>
           </div>
         </div>

@@ -1,22 +1,12 @@
 import iphone from '../assets/iphone.png';
 import slackLogo from '../assets/slack.png';
 import notionLogo from '../assets/notion.png';
-import googleLogo from '../assets/google-workspace.png';
 import adobeLogo from '../assets/adobe.png';
 import figmaLogo from '../assets/figma.png';
 import amazonLogo from '../assets/amazon.png';
 import nikeLogo from '../assets/nike.png';
 import adidasLogo from '../assets/adidas.png';
 import { BrandPill } from './ui/BrandPills'
-import {
-  Slack,
-  Command,
-  Figma,
-  Chrome,
-  ShoppingBag,
-  CreditCard,
-  PenTool,
-} from 'lucide-react'
 export function HeroSection() {
   const scrollToWaitlist = () => {
     const waitlistSection = document.getElementById('waitlist-section');
@@ -53,12 +43,12 @@ export function HeroSection() {
         Create multiple virtual cards, fund them easily, and pay for global services without unnecessary charges or restrictions.
       </p>
 
-      <button onClick={scrollToWaitlist} className="relative z-10 px-8 py-4 text-base font-bold text-[#0d2f28] bg-[#66ff99] rounded-full hover:scale-105 transition-transform duration-200 mb-8 shadow-[0_0_20px_rgba(102,255,153,0.3)]">
+      <button onClick={scrollToWaitlist} className="relative z-10 px-8 py-4 text-base font-bold text-[#0d2f28] bg-[#66ff99] rounded-full hover:scale-105 transition-transform duration-200 mb-8 md:mb-16 shadow-[0_0_20px_rgba(102,255,153,0.3)]">
         Join the Waitlist for Early Access
       </button>
 
       {/* Phone Mockup Area */}
-      <div className="relative w-full mx-auto flex-1 flex items-end justify-center">
+      <div className="relative w-full mx-auto flex-1 md:flex-none md:mt-8 flex items-end justify-center">
         {/* Phone */}
         <div className="relative z-20 w-full">
           <img src={iphone} alt="iPhone Mockup" className="w-full max-w-[400px] mx-auto object-contain" />
@@ -87,7 +77,7 @@ export function HeroSection() {
             // iconImage={googleLogo}
             label="Google Workspace"
             customLabel={
-              <span className="text-sm font-medium">
+              <span className="text-sm font-medium whitespace-nowrap">
                 <span style={{ color: '#4285F4' }}>G</span>
                 <span style={{ color: '#EA4335' }}>o</span>
                 <span style={{ color: '#FBBC04' }}>o</span>

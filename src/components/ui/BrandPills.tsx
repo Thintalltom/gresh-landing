@@ -24,7 +24,7 @@ export function BrandPill({
 }: BrandPillProps) {
   return (
     <div
-      className={`absolute flex items-center gap-2 ${imageOnly ? 'px-2 py-2' : 'px-4 py-2'} bg-[#1A1A1A] rounded-full shadow-xl backdrop-blur-sm text-gray-300 hover:scale-105 hover:bg-[#252525] transition-all duration-300 cursor-default z-10 ${className}`}
+      className={`absolute w-fit max-w-none h-[52px] flex items-center gap-2 ${imageOnly ? 'px-2 py-2' : 'px-4 py-2'} bg-[#1A1A1A] rounded-full shadow-xl backdrop-blur-sm text-gray-300 hover:scale-105 hover:bg-[#252525] transition-all duration-300 cursor-default z-10 ${className}`}
       style={{
         ...style,
         transform: `rotate(${rotation}deg)`,
@@ -35,9 +35,9 @@ export function BrandPill({
       }}
     >
       {iconImage ? (
-        <img src={iconImage} alt={label} className="w-4 h-4 object-contain" />
+        <img src={iconImage} alt={label} className="w-6 h-6 object-contain" />
       ) : (
-        Icon && <Icon className="w-4 h-4" style={{ color: iconColor }} />
+        Icon && <Icon className="w-6 h-6" style={{ color: iconColor }} />
       )}
       {!imageOnly && (
         customLabel ? customLabel : <span className="text-sm font-medium">{label}</span>

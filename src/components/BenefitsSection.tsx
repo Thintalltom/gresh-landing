@@ -13,10 +13,10 @@ export function BenefitsSection() {
                 No hidden fees.
               </h2>
               <p className="text-gray-300 mb-8 max-w-lg">
-                Free virtual cards, no monthly charges, and transparent USD/NGN rates. We show you the real cost upfront, so your money stays yours. Save more on every transaction, whether it’s a $2 app or a big ad campaign. No sneaky fees to ruin your day.
+Create and use virtual cards with transparent pricing. What you see is what you pay! No surprise charges, No hidden fees.
               </p>
               <button className="px-6 py-3 bg-[#33ff66] text-[#0d2f28] font-bold rounded-full hover:opacity-90 transition-opacity">
-                Learn more
+                See how pricing works
               </button>
             </div>
             {/* Decorative Pattern */}
@@ -29,15 +29,16 @@ export function BenefitsSection() {
           <div className="bg-[#33ffcc] rounded-[2.5rem] p-8 md:p-16 overflow-hidden relative min-h-[400px] flex flex-col justify-center">
             <div className="max-w-2xl relative z-10">
               <h2 className="text-3xl md:text-5xl font-bold text-[#0d2f28] mb-6" style={{ fontFamily: 'Bricolage Grotesque' }}>
-                Say goodbye to frustrating
+               Say goodbye to failed payments 
+
                 <br />
-                downtimes in dire time.
+               and downtime
               </h2>
-              <p className="text-[#0d2f28]/70 mb-8 max-w-lg">
-                Our platform is built for near-100% uptime, with local partnerships and robust systems to ensure your payments go through. Pay for that urgent subscription or bill without delays, even during peak times like month-end.
+              <p className="text-[#0d2f28]/70 mb-8 max-w-lg flex justify-end">
+                Gresh is built on reliable infrastructure to ensure your payments go through. Whether it’s a monthly subscription or a critical business expense, we’ve got you covered
               </p>
               <button className="px-6 py-3 bg-[#0d2f28] text-white font-bold rounded-full hover:opacity-90 transition-opacity">
-                Learn more
+                Why Gresh is more reliable
               </button>
             </div>
           </div>
@@ -48,15 +49,15 @@ export function BenefitsSection() {
           <div className="bg-[#33ff66] rounded-[2.5rem] p-8 md:p-16 overflow-hidden relative min-h-[400px] flex flex-col justify-center">
             <div className="max-w-2xl relative z-10">
               <h2 className="text-3xl md:text-5xl font-bold text-[#0d2f28] mb-6" style={{ fontFamily: 'Bricolage Grotesque' }}>
-                Unlike slow or robotic support,
+                Human support.
                 <br />
-                we offer 24/7 team support.
+                Anytime you need it.
               </h2>
               <p className="text-[#0d2f28]/70 mb-8 max-w-lg">
-                Our platform is built for near-100% uptime, with local partnerships and robust systems to ensure your payments go through. Pay for that urgent subscription or bill without delays, even during peak times like month-end.
+               GreshFi’s team is responsive and local, making you feel heard, ready to help anytime, day or night. Got a declined payment at 2 AM? We’re on it, with fast, friendly help that feels like talking to a friend.
               </p>
               <button className="px-6 py-3 bg-[#0d2f28] text-white font-bold rounded-full hover:opacity-90 transition-opacity">
-                Learn more
+                Contact support anytime
               </button>
             </div>
           </div>
